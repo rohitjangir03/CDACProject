@@ -1,0 +1,98 @@
+Sparsh: Online Store
+
+Purpose:
+  The purpose of this document is to provide a detailed specification of the requirements for the Sparsh Online Plant Store application.
+
+Scope:
+  The Sparsh application is an online plant store that allows users to purchase plants. It includes features such as user registration, authentication,   role-based authorization, product browsing, shopping cart management, checkout, and admin operations.
+
+Objective :
+  Sparsh is developed to sell plants.
+  This will help the organization to set their future goals and manage their resources efficiently.
+
+=>Requirements:
+
+->Functional Requirements:
+
+User Registration and Authentication:
+  Users can register for an account by providing a valid email address, username, and password.
+  Users can log in to the application using their registered credentials.
+  Passwords must be securely hashed before storage.
+  User sessions are maintained for a reasonable period of time.
+
+Role-Based Authorization:
+  The application has two roles: "admin" and "user."
+  Admin users have the authority to manage products and perform CRUD operations.
+  Regular users can browse products, add them to the cart, and complete purchases.
+  Unauthorized users are redirected to the login page when trying to access restricted areas.
+
+Product Catalog Browsing:
+  Users can view a list of available plants in the product catalog.
+  Products are displayed with their names, images, prices, and brief descriptions.
+  Users can filter products by categories, such as indoor plants, outdoor plants, etc.
+
+Product Details:
+  Users can click on a product to view detailed information, including images, descriptions, prices, and availability.
+  Users can see related products and recommendations based on the current product.
+
+Shopping Cart Management:
+  Users can add products to their shopping cart from the product details page.
+  Users can view the contents of their shopping cart, including product names, quantities, and total prices.
+  Users can update quantities or remove products from the cart.
+  Cart contents persist across user sessions.
+
+Admin CRUD Operations:
+  Admin users can log in to an admin panel using their credentials.
+  Admin users can view a list of all products in the catalog.
+  Admin users can add new products to the catalog, providing details such as name, description, price, and images.
+  Admin users can edit existing product details.
+  Admin users can delete products from the catalog.
+
+
+->Non - Functional Requirement:
+
+Security:
+Only Admins will able alter the plants(product) details.
+User will be able to modify their own personal details after authentication only.	
+Each user will be to access the system  through his username and password process. 
+System will provide access to  the content , operations using Role based security (Authorization) (Permissions based on Role)
+
+
+Reliability:
+The system will backup users, admin and plants data on regular basis and recover in short time duration to keep system operational, continuous updates are maintained, continuous Administration is done to keep system operational.
+
+
+Availability:
+	uptime:   24* 7  available
+		 99.999%
+
+Maintainability:
+	A Commercial database software will be used to maintain System data Persistence.
+		A readymade Web Server will be installed to host Sparsh Portal (Web Site) to management server capabilities.
+		IT operations team will easily monitor and configure System using Administrative tools provided by Servers.
+		Separate environment will be maintained for system for isolation in  production, testing, and development.
+
+Portability:
+ PDA: Portable Device Application
+ System will provide portable User Interface ( HTML, CSS, JS) through  users will be able to access the Sparsh portal.
+ System can be deployed to server to any OS, Cloud (Azure or AWS or GCP).
+
+Accessibility:
+Only Admins will be able to perform the CRUD operations after authorization.
+Users will be able to buy the plants after autenctication only.
+
+Durability:
+System will retain the session for 30 mins after login , if user is inactive for the given timeframe  then user will redirected to login page.
+System will implement backup and recovery for retaining data of the user.
+
+
+Modularity: 
+System will designed and developed using reusable, independent or dependent on scenarios in the form of modules. These modules will be loosely coupled and highly cohesive. System will contain all the  Details of Products.    
+ 
+Scalability: 
+System assesses the highest workloads under which the system will still meet the performance requirements. There are two ways to enable your system scale as the workloads get higher: horizontal and vertical scaling. Horizontal scaling is provided by adding more machines to the pool of servers. Vertical scaling is achieved by adding more CPU and RAM to the existing machines. 
+
+Safety: 
+Sparsh will be secure from malicious attack, fishing. Functionalities are protected from outside with proper firewall configuration.It will be always kept updated with latest anti virus software. Employee data will be backed up periodically to ensure safety of data using incremental back up strategy. Role based security will be applied for Application data and operations accessibility.
+
+
